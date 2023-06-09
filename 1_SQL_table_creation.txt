@@ -1,0 +1,150 @@
+CREATE DATABASE sqlcommon_task1;
+use sqlcommon_task1;
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Email VARCHAR(20),
+    Phone VARCHAR(15),
+    Address VARCHAR(100),
+    date_purchased date,
+    in_time timestamp,
+    out_time timestamp,
+    social_media VARCHAR(50)
+);
+desc customers;
+-- Inserting data for Customer 1
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media)
+VALUES (11, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-01-03', '2023-01-03 08:00:00', '2023-01-03 02:00:00','instagram'),
+       (111, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-02-05', '2023-02-05 11:10:00', '2023-02-05 13:20:00','youtube'),
+       (112, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-03-10', '2023-03-10 07:00:00', '2023-03-10 10:00:00','twitter'),
+       (113, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-04-23', '2023-04-23 7:00:00', '2023-04-23 12:20:10','facebook'),
+       (114, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-06-28', '2023-06-28 14:00:00', '2023-06-28 14:40:00','telegram');
+-- Inserting data for Customer 2
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media) 
+VALUES (12, 'Annie', 23, 'annie@email.com', '9784663210', '7 marina beach','2023-06-09', '2023-06-09 08:00:00', '2023-06-09 08:10:00','telegram' ),
+       (121, 'Annie', 23, 'annie@email.com', '9784663210', '7 marina beach','2023-05-05', '2023-05-05 11:10:00', '2023-05-05 11:20:00','facebook'),
+       (122, 'Annie', 23, 'annie@email.com', '9784663210', '7 marina beach','2023-04-20', '2023-04-20 17:10:00', '2023-04-20 17:20:00','twitter'),
+       (123, 'Annie', 23, 'annie@email.com', '9784663210', '7 marina beach','2023-03-18', '2023-03-18 18:10:00', '2023-03-18 18:45:10','youtube'),
+       (124, 'Annie', 23, 'annie@email.com', '9784663210', '7 marina beach','2023-01-20', '2023-01-20 15:10:00', '2023-01-20 15:20:00','instgram' );
+-- Inserting data for Customer 3
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media) 
+VALUES (13, 'jack', 45, 'jack@email.com', '9743462676', '48 anna salai','2023-02-09', '2023-02-09 18:00:00', '2023-02-09 19:00:00','twitter'),
+       (131, 'jack', 45, 'jack@email.com', '9743462676', '48 anna salai','2023-04-19', '2023-04-19 11:00:00', '2023-04-19 12:00:00','youtube'),
+       (132, 'jack', 45, 'jack@email.com', '9743462676', '48 anna salai','2023-06-29', '2023-06-09 08:00:00', '2023-06-09 09:00:00','instagram'),
+       (133, 'jack', 45, 'jack@email.com', '9743462676', '48 anna salai','2023-03-20', '2023-03-20 13:10:00', '2023-03-20 14:10:00','facebook'),
+       (134, 'jack', 45, 'jack@email.com', '9743462676', '48 anna salai','2023-05-07', '2023-05-07 15:00:00', '2023-05-07 16:00:00','telegram');
+-- Inserting data for Customer 4
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media)
+VALUES (14, 'kumar', 42, 'kumar@email.com', '8737287592', '9 mgr St','2023-03-14', '2023-03-14 14:00:00', '2023-03-14 15:00:00','instagram'),
+       (141, 'kumar', 42, 'kumar@email.com', '8737287592', '9 mgr St','2023-02-11', '2023-02-11 14:45:00', '2023-02-11 15:50:20','youtube'),
+       (142, 'kumar', 42, 'kumar@email.com', '8737287592', '9 mgr St','2023-01-15', '2023-01-15 11:00:00', '2023-01-15 12:20:10','telegram'),
+       (143, 'kumar', 42, 'kumar@email.com', '8737287592', '9 mgr St','2023-05-16', '2023-05-16 10:20:00', '2023-05-16 11:20:00','facebook'),
+       (144, 'kumar', 42, 'kumar@email.com', '8737287592', '9 mgr St','2023-06-10', '2023-06-10 09:00:00', '2023-06-10 10:00:00','twitter');
+-- Inserting data for Customer 5
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media )
+VALUES (15, 'aish', 48, 'aish@email.com', '7874819247', '90 gandhi St','2023-05-23', '2023-05-23 14:00:00', '2023-03-14 15:00:00','instagram' ),
+       (151, 'aish', 48, 'aish@email.com', '7874819247', '90 gandhi St','2023-02-14', '2023-02-14 09:00:00', '2023-03-14 10:00:00','facebook'),
+       (152, 'aish', 48, 'aish@email.com', '7874819247', '90 gandhi St','2023-03-28', '2023-03-28 10:00:00', '2023-03-28 11:00:00','youtube' ),
+       (153, 'aish', 48, 'aish@email.com', '7874819247', '90 gandhi St','2023-01-10', '2023-01-10 11:00:00', '2023-01-10 12:00:00','twitter'),
+       (154, 'aish', 48, 'aish@email.com', '7874819247', '90 gandhi St','2023-04-24', '2023-04-24 13:00:00', '2023-04-24 14:00:00','telegram');
+-- Inserting data for Customer 6
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media )
+VALUES (16, 'agalya', 47, 'agalya@email.com', '9737515463', '7g rainbow colony','2023-01-06', '2023-01-06 14:00:00', '2023-01-06 15:00:00','twitter'),
+       (161, 'agalya', 47, 'agalya@email.com', '9737515463', '7g rainbow colony','2023-06-10', '2023-06-10 16:00:00', '2023-06-10 17:00:00','instagram'),
+       (162, 'agalya', 47, 'agalya@email.com', '9737515463', '7g rainbow colony','2023-04-22', '2023-04-22 18:00:00', '2023-04-10 19:00:00','telegram'),
+       (163, 'agalya', 47, 'agalya@email.com', '9737515463', '7g rainbow colony','2023-05-19', '2023-05-19 20:00:00', '2023-05-19 21:00:00','youtube'),
+       (164, 'agalya', 47, 'agalya@email.com', '9737515463', '7g rainbow colony','2023-03-13', '2023-03-13 21:00:00', '2023-03-13 2:00:00','facebook');
+   -- Inserting data for Customer 7
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media )
+VALUES (17, 'vijay', 56, 'vj@email.com', '6237178634', '16 podhigai nagar','2023-04-18', '2023-04-18 18:00:00', '2023-04-10 19:00:00','telegram'),
+       (171, 'vijay', 56, 'vj@email.com', '6237178634', '16 podhigai nagar','2023-02-28', '2023-02-28 17:00:00', '2023-06-10 18:00:00','whatsapp'),
+       (172, 'vijay', 56, 'vj@email.com', '6237178634', '16 podhigai nagar','2023-06-07', '2023-06-07 10:00:00', '2023-06-07 11:00:00','instagram'),
+       (173, 'vijay', 56, 'vj@email.com', '6237178634', '16 podhigai nagar','2023-05-10', '2023-05-10 16:00:00', '2023-05-10 17:00:00','youtube'),
+       (174, 'vijay', 56, 'vj@email.com', '6237178634', '16 podhigai nagar','2023-01-23', '2023-01-23 14:00:00', '2023-01-23 15:00:00','facebook');
+-- Inserting data for Customer 8
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media )
+VALUES (18, 'jaanu', 25, 'jaanu@email.com', '8733364884', '05 nethaji nagar', '2023-01-07','2023-01-07 09:00:00', '2023-01-07 10:00:00','facebook'),
+       (181, 'jaanu', 25, 'jaanu@email.com', '8733364884', '05 nethaji nagar', '2023-02-13','2023-02-13 11:00:00', '2023-02-13 12:00:00','whatsapp'),
+       (182, 'jaanu', 25, 'jaanu@email.com', '8733364884', '05 nethaji nagar', '2023-05-21','2023-05-21 14:00:00', '2023-05-21 15:00:00','youtube' ),
+       (183, 'jaanu', 25, 'jaanu@email.com', '8733364884', '05 nethaji nagar', '2023-04-28','2023-04-28 15:00:00', '2023-04-28 16:00:00','twitter'),
+       (184, 'jaanu', 25, 'jaanu@email.com', '8733364884', '05 nethaji nagar', '2023-06-01','2023-06-01 16:00:00', '2023-06-01 17:00:00','telegram');
+-- Inserting data for Customer 9
+INSERT INTO Customers(CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media )
+VALUES (19, 'ravi', 26, 'ravi@email.com', '9736637267', '044 bharath St','2023-05-27','2023-05-27 11:00:00', '2023-05-21 12:00:00','youtube'),
+       (191, 'ravi', 26, 'ravi@email.com', '9736637267', '044 bharath St','2023-04-21','2023-04-21 12:00:00', '2023-04-21 13:00:00','instagram'),
+       (192, 'ravi', 26, 'ravi@email.com', '9736637267', '044 bharath St','2023-06-13','2023-06-13 13:00:00', '2023-05-21 14:00:00','facebook'),
+       (193, 'ravi', 26, 'ravi@email.com', '9736637267', '044 bharath St','2023-03-18','2023-03-18 16:00:00', '2023-03-18 17:00:00','whatsapp'),
+       (194, 'ravi', 26, 'ravi@email.com', '9736637267', '044 bharath St','2023-01-19','2023-01-19 20:00:00', '2023-01-19 21:00:00','twitter');
+-- Inserting data for Customer 10
+INSERT INTO Customers(CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media )
+VALUES (20, 'arjun', 22, 'arjun@email.com', '8743274678', '98 ntr nagar','2023-05-27','2023-06-27 11:00:00', '2023-06-21 12:00:00','twitter'),
+       (201, 'arjun', 22, 'arjun@email.com', '8743274678', '98 ntr nagar','2023-04-21','2023-03-21 12:00:00', '2023-03-21 13:00:00','whatsapp'),
+       (202, 'arjun', 22, 'arjun@email.com', '8743274678', '98 ntr nagar','2023-05-13','2023-05-13 13:00:00', '2023-05-21 14:00:00','facebook'),
+       (203, 'arjun', 22, 'arjun@email.com', '8743274678', '98 ntr nagar','2023-04-18','2023-04-18 16:00:00', '2023-04-18 17:00:00','instagram'),
+       (204, 'arjun', 22, 'arjun@email.com', '8743274678', '98 ntr nagar','2023-02-19','2023-02-19 20:00:00', '2023-02-19 21:00:00','youtube');
+SELECT*FROM Customers; 
+
+use sqlcommon_task1;
+CREATE TABLE order_table (
+orderID int primary key,
+CustomerID int,
+foreign key(CustomerID)references customers(CustomerID),
+date_purchased date,
+productID varchar(10),
+product_name varchar(50),
+arrival_date date,
+dispatch_date date,
+sender_location varchar(20),
+receiver_location varchar(20)
+);
+-- Inserting data for Customer 2
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(006,12, '2023-06-09','p06','fruits','2023-06-11','2023-06-13','chennai', 'ambur'),
+		(007,121,'2023-05-05','p07','dress','2023-05-15','2023-05-28','bangalore','salem'),
+		(008,122,'2023-04-24','p08','cosmetics','2023-04-25','2023-05-05','ariyalur','trichy'),
+		(009,123,'2023-03-17','p09','snacks','2023-03-21','2023-03-25','chennai','avadi'),
+		(010,124,'2023-01-25','p10','vegetables','2023-01-30','2023-02-01','koyambedu','ariyalur');
+-- Inserting data for Customer 3
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(011,13, '2023-02-09','p11','dress','2023-02-11','2023-03-13','chennai', 'punjab'),
+		(012,131,'2023-04-19','p12','fruits','2023-05-15','2023-05-28','chennai','dubai'),
+		(013,132,'2023-06-29','p13','vegetables','2023-06-30','2023-07-01','tnagr','koyambdu'),
+		(014,133,'2023-03-20','p14','snacks','2023-03-21','2023-03-25','chennai','hosur'),
+		(015,134,'2023-05-07','p15','cosmetics','2023-05-30','2023-06-20','madurai','ambur');
+-- Inserting data for Customer 4
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(016,14, '2023-03-14','p16','vegetables','2023-03-17','2023-03-19','chennai', 'hosur'),
+		(017,141,'2023-02-11','p17','cosmetics','2023-02-15','2023-05-28','trichy','ambur'),
+		(018,142,'2023-01-15','p18','snacks','2023-01-30','2023-02-01','tnagr','chennai'),
+		(019,143,'2023-05-16','p19','dress','2023-05-21','2023-05-25','salem','avadi'),
+		(020,144,'2023-06-10','p20','fruits','2023-06-15','2023-06-20','madurai','chennai');
+-- Inserting data for Customer 5
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(021,15, '2023-05-23','p21','snacks','2023-05-25','2023-05-29','chennai', 'ambattur'),
+		(022,151,'2023-02-14','p22','vegetables','2023-02-15','2023-05-28','hosur','ariyalur'),
+		(023,152,'2023-03-28','p23','fruits','2023-03-30','2023-04-01','vellore','koyambedu'),
+		(024,153,'2023-01-10','p24','cosmetics','2023-01-21','2023-05-25','hosur','avadi'),
+		(025,154,'2023-04-24','p25','dress','2023-04-27','2023-05-10','hosur','vellore');
+-- Inserting data for Customer 6
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(026,16, '2023-01-06','p26','fruits','2023-01-25','2023-01-29','chennai', 'avadi'),
+		(027,161,'2023-06-10','p27','cosmetics','2023-06-15','2023-06-28','bangalore','ariyalur'),
+		(028,162,'2023-04-22','p28','vegetables','2023-04-25','2023-04-29','tnagr','thiruvallur'),
+		(029,163,'2023-05-19','p29','snacks','2023-05-21','2023-05-25','chennai','avadi'),
+		(030,164,'2023-03-13','p30','dress','2023-03-20','2023-03-31','pattabiram','tirunelveli');
+-- Inserting data for Customer 7
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(031,17, '2023-04-18','p31','dress','2023-04-25','2023-04-29','vellore', 'mangalore'),
+		(032,171,'2023-02-28','p32','snacks','2023-03-15','2023-03-28','perambur','hyderabad'),
+		(033,172,'2023-06-07','p33','vegetables','2023-06-15','2023-06-25','ariyalur','andhra'),
+		(034,173,'2023-05-10','p34','cosmetics','2023-05-23','2023-05-29','hosur','telugana'),
+		(035,174,'2023-01-23','p35','fruits','2023-01-25','2023-01-26','salem','chennai');
+-- Inserting data for Customer 8
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(036,18, '2023-01-07','p36','vegetables','2023-01-15','2023-01-19','mysur', 'andhra'),
+		(037,181,'2023-02-13','p37','fruits','2023-02-15','2023-02-28','chennai','bangalore'),
+		(038,182,'2023-05-21','p38','snacks','2023-05-25','2023-05-29','tnagr','avadi'),
+		(039,183,'2023-04-28','p39','dress','2023-04-30','2023-05-10','hosur','telugana'),
+		(040,184,'2023-06-01','p40','cosmetics','2023-06-15','2023-01-27','chennai','vellore');
+        SELECT*FROM order_table;
