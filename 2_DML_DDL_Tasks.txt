@@ -1,6 +1,6 @@
 1.how to create table and add multiple columns in a table in sql?
 CREATE TABLE Customers (
-    CustomerID INT PRIMARY KEY,
+    CustomerID INT,
     Name VARCHAR(50),
     Age INT,
     Email VARCHAR(20),
@@ -15,7 +15,7 @@ CREATE TABLE Customers (
 -- Inserting data for Customer 1
 INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media)
 VALUES (11, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-01-03', '2023-01-03 08:00:00', '2023-01-03 02:00:00','instagram'),
-       (111, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-02-05', '2023-02-05 11:10:00', '2023-02-05 13:20:00','youtube'),
-       (112, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-03-10', '2023-03-10 07:00:00', '2023-03-10 10:00:00','twitter'),
-       (113, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-04-23', '2023-04-23 7:00:00', '2023-04-23 12:20:10','facebook'),
-       (114, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-06-28', '2023-06-28 14:00:00', '2023-06-28 14:40:00','telegram');
+       (11, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-02-05', '2023-02-05 11:10:00', '2023-02-05 13:20:00','youtube'),
+       (11, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-03-10', '2023-03-10 07:00:00', '2023-03-10 10:00:00','twitter'),
+       (11, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-04-23', '2023-04-23 7:00:00', '2023-04-23 12:20:10','facebook'),
+       (11, 'priya', 20, 'priya@email.com', '9848478765', '2 anna nagar', '2023-06-28', '2023-06-28 14:00:00', '2023-06-28 14:40:00','telegram');
